@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eu.imninja.GUI.Controller.Controller">
+   <children>
+      <Button layoutX="427.0" layoutY="344.0" mnemonicParsing="false" onAction="#renameFiles" prefHeight="42.0" prefWidth="159.0" text="Rename This!" />
+      <ListView fx:id="FileList" layoutX="14.0" layoutY="18.0" onMouseClicked="#keyPressed" prefHeight="367.0" prefWidth="225.0" style="-fx-background-color: gray;" />
+      <Label layoutX="278.0" layoutY="58.0" prefHeight="33.0" prefWidth="98.0" text="Format:" />
+      <TextField fx:id="formatting" layoutX="353.0" layoutY="62.0" prefHeight="25.0" prefWidth="217.0" promptText="Serien Name - S01E$ep.mp4" />
+      <Button layoutX="259.0" layoutY="344.0" mnemonicParsing="false" onAction="#loadFiles" prefHeight="42.0" prefWidth="159.0" text="Dateien Laden" />
+      <Text fill="#867f7f" layoutX="278.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$ep = Nach Listenreinfolge Nummerieren" />
+      <Text fill="#867f7f" layoutX="278.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L : Kopiert Name von Selektierten Eintrag" />
+      <Text fill="#867f7f" layoutX="278.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attribute:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#867f7f" layoutX="278.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hotkeys:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#867f7f" layoutX="278.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEL: Löscht Selektierten Eintrag" />
+      <Text fill="#867f7f" layoutX="278.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X: Löscht komplette Liste" />
+      <CheckBox fx:id="openFolder" layoutX="259.0" layoutY="305.0" mnemonicParsing="false" text="Ordner öffnen" />
+   </children>
+</AnchorPane>
